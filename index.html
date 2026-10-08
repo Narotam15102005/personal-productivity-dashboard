@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="SmartLife - Personal Productivity and Task Management Dashboard">
+        content="SmartLife - Personal Productivity and Task Management Dashboard">
 
     <title>SmartLife | Productivity Dashboard</title>
 
@@ -14,470 +14,252 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= PRELOADER ================= -->
+    <!-- ================= PRELOADER ================= -->
 
-<div id="preloader">
-    <div class="loader">
-        <div class="loader-circle"></div>
-        <span>SmartLife</span>
-    </div>
-</div>
-
-
-<!-- ================= APP ================= -->
-
-<div class="app">
-
-
-    <!-- ================= SIDEBAR ================= -->
-
-    <aside class="sidebar" id="sidebar">
-
-        <div class="brand">
-            <div class="brand-icon">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
-
-            <div>
-                <h2>SmartLife</h2>
-                <span>Productivity Hub</span>
-            </div>
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <span>SmartLife</span>
         </div>
+    </div>
 
 
-        <nav class="navigation">
+    <!-- ================= APP ================= -->
 
-            <p class="nav-title">MAIN</p>
+    <div class="app">
 
-            <button class="nav-item active" data-section="dashboard">
-                <i class="fa-solid fa-chart-pie"></i>
-                <span>Dashboard</span>
-            </button>
+        <!-- ================= SIDEBAR ================= -->
 
-            <button class="nav-item" data-section="tasks">
-                <i class="fa-solid fa-list-check"></i>
-                <span>Tasks</span>
-            </button>
+        <aside class="sidebar" id="sidebar">
 
-            <button class="nav-item" data-section="habits">
-                <i class="fa-solid fa-fire"></i>
-                <span>Habits</span>
-            </button>
+            <!-- Brand -->
 
-            <button class="nav-item" data-section="notes">
-                <i class="fa-solid fa-note-sticky"></i>
-                <span>Notes</span>
-            </button>
+            <div class="brand">
 
-
-            <p class="nav-title">PERSONAL</p>
-
-            <button class="nav-item" data-section="analytics">
-                <i class="fa-solid fa-chart-line"></i>
-                <span>Analytics</span>
-            </button>
-
-            <button class="nav-item" data-section="settings">
-                <i class="fa-solid fa-gear"></i>
-                <span>Settings</span>
-            </button>
-
-        </nav>
-
-
-        <!-- SIDEBAR BOTTOM -->
-
-        <div class="sidebar-bottom">
-
-            <div class="focus-card">
-
-                <div class="focus-icon">
-                    <i class="fa-solid fa-bullseye"></i>
+                <div class="brand-icon">
+                    <i class="fa-solid fa-bolt"></i>
                 </div>
 
                 <div>
-                    <strong>Stay Focused</strong>
-                    <p>Small steps create big results.</p>
+                    <h2>SmartLife</h2>
+                    <span>Productivity Hub</span>
                 </div>
 
             </div>
 
-            <div class="sidebar-footer">
-                <span>SmartLife v1.0</span>
-            </div>
 
-        </div>
+            <!-- Navigation -->
 
-    </aside>
+            <nav class="navigation">
 
-
-
-    <!-- ================= MAIN CONTENT ================= -->
-
-    <main class="main-content">
-
-
-        <!-- ================= TOPBAR ================= -->
-
-        <header class="topbar">
-
-            <button class="mobile-menu" id="mobileMenu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-
-            <div class="page-heading">
-
-                <h1 id="pageTitle">Dashboard</h1>
-
-                <p id="currentDate">
-                    Loading date...
-                </p>
-
-            </div>
-
-
-            <div class="topbar-actions">
-
-                <!-- Search -->
-
-                <div class="global-search">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                    <input
-                        type="text"
-                        id="globalSearch"
-                        placeholder="Search tasks..."
-                    >
-
-                </div>
-
-
-                <!-- Theme -->
+                <p class="nav-title">MAIN</p>
 
                 <button
-                    class="icon-button"
-                    id="themeToggle"
-                    title="Toggle theme"
-                >
-                    <i class="fa-solid fa-moon"></i>
+                    class="nav-item active"
+                    data-section="dashboard"
+                    type="button">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+
                 </button>
 
 
-                <!-- Notification -->
-
                 <button
-                    class="icon-button notification-button"
-                    id="notificationButton"
-                    title="Notifications"
-                >
-                    <i class="fa-regular fa-bell"></i>
-                    <span class="notification-dot"></span>
+                    class="nav-item"
+                    data-section="tasks"
+                    type="button">
+
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Tasks</span>
+
                 </button>
 
 
-                <!-- Profile -->
+                <button
+                    class="nav-item"
+                    data-section="habits"
+                    type="button">
 
-                <div class="profile">
+                    <i class="fa-solid fa-fire"></i>
+                    <span>Habits</span>
 
-                    <div class="profile-avatar">
-                        <span id="profileInitial">N</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="notes"
+                    type="button">
+
+                    <i class="fa-solid fa-note-sticky"></i>
+                    <span>Notes</span>
+
+                </button>
+
+
+                <p class="nav-title">PERSONAL</p>
+
+
+                <button
+                    class="nav-item"
+                    data-section="analytics"
+                    type="button">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Analytics</span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="settings"
+                    type="button">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+
+                </button>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <div class="focus-card">
+
+                    <div class="focus-icon">
+                        <i class="fa-solid fa-bullseye"></i>
                     </div>
 
-                    <div class="profile-info">
-
-                        <strong id="profileName">
-                            Student
-                        </strong>
-
-                        <span>Productivity Mode</span>
-
+                    <div>
+                        <strong>Stay Focused</strong>
+                        <p>Small steps create big results.</p>
                     </div>
 
+                </div>
+
+
+                <div class="sidebar-footer">
+                    <span>SmartLife v1.0</span>
                 </div>
 
             </div>
 
-        </header>
+        </aside>
 
 
+        <!-- ================= MAIN CONTENT ================= -->
 
-        <!-- ================= CONTENT ================= -->
-
-        <div class="content-area">
-
-
-            <!-- ================= DASHBOARD ================= -->
-
-            <section
-                class="page-section active-section"
-                id="dashboardSection"
-            >
+        <main class="main-content">
 
 
-                <!-- Welcome -->
+            <!-- ================= TOPBAR ================= -->
 
-                <div class="welcome-card">
+            <header class="topbar">
 
-                    <div class="welcome-content">
+                <button
+                    class="mobile-menu"
+                    id="mobileMenu"
+                    type="button"
+                    aria-label="Open menu">
 
-                        <span class="welcome-label">
-                            <i class="fa-solid fa-sparkles"></i>
-                            YOUR DAILY SPACE
-                        </span>
+                    <i class="fa-solid fa-bars"></i>
 
-                        <h2>
-                            Welcome back,
-                            <span id="welcomeName">Student</span> 👋
-                        </h2>
-
-                        <p id="motivationalText">
-                            Plan your day and make progress one task at a time.
-                        </p>
-
-                        <button class="primary-button" id="quickTaskButton">
-                            <i class="fa-solid fa-plus"></i>
-                            Add New Task
-                        </button>
-
-                    </div>
+                </button>
 
 
-                    <div class="welcome-decoration">
+                <div class="page-heading">
 
-                        <div class="floating-shape shape-one"></div>
-                        <div class="floating-shape shape-two"></div>
-                        <div class="floating-shape shape-three"></div>
+                    <h1 id="pageTitle">Dashboard</h1>
 
-                        <i class="fa-solid fa-rocket rocket-icon"></i>
-
-                    </div>
+                    <p id="currentDate">
+                        Loading date...
+                    </p>
 
                 </div>
 
 
-
-                <!-- ================= STATISTICS ================= -->
-
-                <div class="stats-grid">
+                <div class="topbar-actions">
 
 
-                    <div class="stat-card">
+                    <!-- Search -->
 
-                        <div class="stat-icon purple">
-                            <i class="fa-solid fa-list-check"></i>
+                    <div class="global-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="globalSearch"
+                            placeholder="Search tasks..."
+                            autocomplete="off">
+
+                    </div>
+
+
+                    <!-- Theme -->
+
+                    <button
+                        class="icon-button"
+                        id="themeToggle"
+                        title="Toggle theme"
+                        type="button">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+
+                    <!-- Notification -->
+
+                    <button
+                        class="icon-button notification-button"
+                        id="notificationButton"
+                        title="Notifications"
+                        type="button">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- Profile -->
+
+                    <div class="profile">
+
+                        <div class="profile-avatar">
+                            <span id="profileInitial">S</span>
                         </div>
 
-                        <div class="stat-details">
+                        <div class="profile-info">
 
-                            <span>Total Tasks</span>
-
-                            <strong id="totalTasks">
-                                0
+                            <strong id="profileName">
+                                Student
                             </strong>
 
-                            <small>
-                                <i class="fa-solid fa-layer-group"></i>
-                                All tasks
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stat-card">
-
-                        <div class="stat-icon green">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-
-                        <div class="stat-details">
-
-                            <span>Completed</span>
-
-                            <strong id="completedTasks">
-                                0
-                            </strong>
-
-                            <small class="positive">
-                                <i class="fa-solid fa-arrow-up"></i>
-                                Great progress
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stat-card">
-
-                        <div class="stat-icon orange">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-
-                        <div class="stat-details">
-
-                            <span>Pending</span>
-
-                            <strong id="pendingTasks">
-                                0
-                            </strong>
-
-                            <small>
-                                <i class="fa-solid fa-hourglass-half"></i>
-                                Keep going
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="stat-card">
-
-                        <div class="stat-icon blue">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-
-                        <div class="stat-details">
-
-                            <span>Productivity</span>
-
-                            <strong>
-                                <span id="productivityValue">0</span>%
-                            </strong>
-
-                            <small>
-                                <i class="fa-solid fa-chart-line"></i>
-                                Overall score
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- ================= DASHBOARD GRID ================= -->
-
-                <div class="dashboard-grid">
-
-
-                    <!-- TASKS -->
-
-                    <div class="dashboard-card tasks-card">
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <h3>Today's Tasks</h3>
-
-                                <p>
-                                    Manage your priorities
-                                </p>
-
-                            </div>
-
-                            <button
-                                class="text-button"
-                                data-section-target="tasks"
-                            >
-                                View All
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-
-                        </div>
-
-
-                        <div id="dashboardTasks" class="task-preview">
-
-                            <div class="empty-state">
-
-                                <div class="empty-icon">
-                                    <i class="fa-solid fa-clipboard-check"></i>
-                                </div>
-
-                                <h4>No tasks yet</h4>
-
-                                <p>
-                                    Add your first task to get started.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- PRODUCTIVITY -->
-
-                    <div class="dashboard-card productivity-card">
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <h3>Daily Progress</h3>
-
-                                <p>
-                                    Your productivity today
-                                </p>
-
-                            </div>
-
-                            <i class="fa-solid fa-chart-simple card-header-icon"></i>
-
-                        </div>
-
-
-                        <div class="progress-container">
-
-                            <div
-                                class="progress-ring"
-                                id="progressRing"
-                            >
-
-                                <div class="progress-inner">
-
-                                    <strong id="progressPercentage">
-                                        0%
-                                    </strong>
-
-                                    <span>Completed</span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="progress-message">
-
-                            <i class="fa-solid fa-lightbulb"></i>
-
-                            <span id="progressMessage">
-                                Start completing tasks to improve your score.
+                            <span>
+                                Productivity Mode
                             </span>
 
                         </div>
@@ -486,20 +268,614 @@
 
                 </div>
 
+            </header>
 
 
-                <!-- ================= QUICK ACTIONS ================= -->
+            <!-- ================= CONTENT ================= -->
 
-                <div class="dashboard-card quick-actions-card">
+            <div class="content-area">
 
-                    <div class="card-header">
+
+                <!-- ================= DASHBOARD ================= -->
+
+                <section
+                    class="page-section active-section"
+                    id="dashboardSection">
+
+
+                    <!-- Welcome Card -->
+
+                    <div class="welcome-card">
+
+                        <div class="welcome-content">
+
+                            <span class="welcome-label">
+                                <i class="fa-solid fa-sparkles"></i>
+                                YOUR DAILY SPACE
+                            </span>
+
+
+                            <h2>
+                                Welcome back,
+                                <span id="welcomeName">
+                                    Student
+                                </span>
+                                👋
+                            </h2>
+
+
+                            <p id="motivationalText">
+                                Plan your day and make progress
+                                one task at a time.
+                            </p>
+
+
+                            <button
+                                class="primary-button"
+                                id="quickTaskButton"
+                                type="button">
+
+                                <i class="fa-solid fa-plus"></i>
+                                Add New Task
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- Decorative Animation -->
+
+                        <div class="welcome-decoration">
+
+                            <div class="floating-shape shape-one"></div>
+
+                            <div class="floating-shape shape-two"></div>
+
+                            <div class="floating-shape shape-three"></div>
+
+                            <i class="fa-solid fa-rocket rocket-icon"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================= STATISTICS ================= -->
+
+                    <div class="stats-grid">
+
+
+                        <!-- Total Tasks -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon purple">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+
+                            <div class="stat-details">
+
+                                <span>Total Tasks</span>
+
+                                <strong id="totalTasks">
+                                    0
+                                </strong>
+
+                                <small>
+                                    <i class="fa-solid fa-layer-group"></i>
+                                    All tasks
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Completed -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon green">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="stat-details">
+
+                                <span>Completed</span>
+
+                                <strong id="completedTasks">
+                                    0
+                                </strong>
+
+                                <small class="positive">
+                                    <i class="fa-solid fa-arrow-up"></i>
+                                    Great progress
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pending -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon orange">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+
+                            <div class="stat-details">
+
+                                <span>Pending</span>
+
+                                <strong id="pendingTasks">
+                                    0
+                                </strong>
+
+                                <small>
+                                    <i class="fa-solid fa-hourglass-half"></i>
+                                    Keep going
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Productivity -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon blue">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div class="stat-details">
+
+                                <span>Productivity</span>
+
+                                <strong>
+                                    <span id="productivityValue">0</span>%
+                                </strong>
+
+                                <small>
+                                    <i class="fa-solid fa-chart-line"></i>
+                                    Overall score
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================= DASHBOARD GRID ================= -->
+
+                    <div class="dashboard-grid">
+
+
+                        <!-- Today's Tasks -->
+
+                        <div class="dashboard-card tasks-card">
+
+                            <div class="card-header">
+
+                                <div>
+
+                                    <h3>Today's Tasks</h3>
+
+                                    <p>
+                                        Manage your priorities
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    class="text-button"
+                                    data-section-target="tasks"
+                                    type="button">
+
+                                    View All
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                id="dashboardTasks"
+                                class="task-preview">
+
+                                <div class="empty-state">
+
+                                    <div class="empty-icon">
+                                        <i class="fa-solid fa-clipboard-check"></i>
+                                    </div>
+
+                                    <h4>No tasks yet</h4>
+
+                                    <p>
+                                        Add your first task to get started.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Daily Progress -->
+
+                        <div class="dashboard-card productivity-card">
+
+                            <div class="card-header">
+
+                                <div>
+
+                                    <h3>Daily Progress</h3>
+
+                                    <p>
+                                        Your productivity today
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-chart-simple card-header-icon"></i>
+
+                            </div>
+
+
+                            <div class="progress-container">
+
+                                <div
+                                    class="progress-ring"
+                                    id="progressRing">
+
+                                    <div class="progress-inner">
+
+                                        <strong id="progressPercentage">
+                                            0%
+                                        </strong>
+
+                                        <span>
+                                            Completed
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress-message">
+
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                <span id="progressMessage">
+                                    Start completing tasks
+                                    to improve your score.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================= QUICK ACTIONS ================= -->
+
+                    <div class="dashboard-card quick-actions-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>Quick Actions</h3>
+
+                                <p>
+                                    Jump into your productivity tools
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+
+                            <button
+                                class="quick-action"
+                                id="addTaskAction"
+                                type="button">
+
+                                <div class="quick-action-icon purple">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Add Task</strong>
+                                    <span>Create a new task</span>
+                                </div>
+
+                            </button>
+
+
+                            <button
+                                class="quick-action"
+                                id="addNoteAction"
+                                type="button">
+
+                                <div class="quick-action-icon blue">
+                                    <i class="fa-solid fa-note-sticky"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Write Note</strong>
+                                    <span>Capture an idea</span>
+                                </div>
+
+                            </button>
+
+
+                            <button
+                                class="quick-action"
+                                id="addHabitAction"
+                                type="button">
+
+                                <div class="quick-action-icon orange">
+                                    <i class="fa-solid fa-fire"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Track Habit</strong>
+                                    <span>Build consistency</span>
+                                </div>
+
+                            </button>
+
+
+                            <button
+                                class="quick-action"
+                                id="viewAnalyticsAction"
+                                type="button">
+
+                                <div class="quick-action-icon green">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+
+                                <div>
+                                    <strong>View Analytics</strong>
+                                    <span>Check your progress</span>
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= TASKS ================= -->
+
+                <section
+                    class="page-section"
+                    id="tasksSection">
+
+                    <div class="section-header">
 
                         <div>
 
-                            <h3>Quick Actions</h3>
+                            <span class="section-label">
+                                PRODUCTIVITY
+                            </span>
+
+                            <h2>Task Manager</h2>
 
                             <p>
-                                Jump into your productivity tools
+                                Organize your work and stay
+                                on top of your priorities.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="primary-button"
+                            id="addTaskButton"
+                            type="button">
+
+                            <i class="fa-solid fa-plus"></i>
+                            New Task
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="task-controls">
+
+                        <div class="search-box">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="taskSearch"
+                                placeholder="Search tasks..."
+                                autocomplete="off">
+
+                        </div>
+
+
+                        <select id="taskFilter">
+
+                            <option value="all">
+                                All Tasks
+                            </option>
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="completed">
+                                Completed
+                            </option>
+
+                            <option value="high">
+                                High Priority
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        id="taskList"
+                        class="full-task-list">
+
+                        <div class="empty-state">
+
+                            <div class="empty-icon">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+
+                            <h4>
+                                Your task list is empty
+                            </h4>
+
+                            <p>
+                                Create a task and start being productive.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= HABITS ================= -->
+
+                <section
+                    class="page-section"
+                    id="habitsSection">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                CONSISTENCY
+                            </span>
+
+                            <h2>Habit Tracker</h2>
+
+                            <p>
+                                Build positive habits and
+                                maintain your daily streak.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="primary-button"
+                            id="addHabitButton"
+                            type="button">
+
+                            <i class="fa-solid fa-plus"></i>
+                            Add Habit
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="habitList"
+                        class="habit-grid">
+                    </div>
+
+                </section>
+
+
+                <!-- ================= NOTES ================= -->
+
+                <section
+                    class="page-section"
+                    id="notesSection">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                IDEAS
+                            </span>
+
+                            <h2>My Notes</h2>
+
+                            <p>
+                                Save important thoughts,
+                                ideas and reminders.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="primary-button"
+                            id="addNoteButton"
+                            type="button">
+
+                            <i class="fa-solid fa-plus"></i>
+                            New Note
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="notesGrid"
+                        class="notes-grid">
+                    </div>
+
+                </section>
+
+
+                <!-- ================= ANALYTICS ================= -->
+
+                <section
+                    class="page-section"
+                    id="analyticsSection">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                INSIGHTS
+                            </span>
+
+                            <h2>
+                                Productivity Analytics
+                            </h2>
+
+                            <p>
+                                Understand your productivity
+                                and improve your workflow.
                             </p>
 
                         </div>
@@ -507,959 +883,730 @@
                     </div>
 
 
-                    <div class="quick-actions">
+                    <div class="analytics-grid">
 
 
-                        <button
-                            class="quick-action"
-                            id="addTaskAction"
-                        >
+                        <!-- Completion -->
 
-                            <div class="quick-action-icon purple">
-                                <i class="fa-solid fa-plus"></i>
+                        <div class="dashboard-card">
+
+                            <div class="card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Task Completion
+                                    </h3>
+
+                                    <p>
+                                        Overall completion rate
+                                    </p>
+
+                                </div>
+
                             </div>
 
-                            <div>
-                                <strong>Add Task</strong>
-                                <span>Create a new task</span>
-                            </div>
 
-                        </button>
+                            <div class="large-progress">
 
+                                <div class="large-progress-bar">
 
-                        <button
-                            class="quick-action"
-                            id="addNoteAction"
-                        >
+                                    <div
+                                        class="large-progress-fill"
+                                        id="analyticsProgress">
+                                    </div>
 
-                            <div class="quick-action-icon blue">
-                                <i class="fa-solid fa-note-sticky"></i>
-                            </div>
+                                </div>
 
-                            <div>
-                                <strong>Write Note</strong>
-                                <span>Capture an idea</span>
-                            </div>
 
-                        </button>
-
-
-                        <button
-                            class="quick-action"
-                            id="addHabitAction"
-                        >
-
-                            <div class="quick-action-icon orange">
-                                <i class="fa-solid fa-fire"></i>
-                            </div>
-
-                            <div>
-                                <strong>Track Habit</strong>
-                                <span>Build consistency</span>
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            class="quick-action"
-                            id="viewAnalyticsAction"
-                        >
-
-                            <div class="quick-action-icon green">
-                                <i class="fa-solid fa-chart-line"></i>
-                            </div>
-
-                            <div>
-                                <strong>View Analytics</strong>
-                                <span>Check your progress</span>
-                            </div>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-            </section>
-
-
-
-            <!-- ================= TASKS SECTION ================= -->
-
-            <section
-                class="page-section"
-                id="tasksSection"
-            >
-
-                <div class="section-header">
-
-                    <div>
-
-                        <span class="section-label">
-                            PRODUCTIVITY
-                        </span>
-
-                        <h2>Task Manager</h2>
-
-                        <p>
-                            Organize your work and stay on top of your priorities.
-                        </p>
-
-                    </div>
-
-                    <button
-                        class="primary-button"
-                        id="addTaskButton"
-                    >
-                        <i class="fa-solid fa-plus"></i>
-                        New Task
-                    </button>
-
-                </div>
-
-
-                <!-- Task Controls -->
-
-                <div class="task-controls">
-
-                    <div class="search-box">
-
-                        <i class="fa-solid fa-magnifying-glass"></i>
-
-                        <input
-                            type="text"
-                            id="taskSearch"
-                            placeholder="Search tasks..."
-                        >
-
-                    </div>
-
-
-                    <select id="taskFilter">
-
-                        <option value="all">
-                            All Tasks
-                        </option>
-
-                        <option value="pending">
-                            Pending
-                        </option>
-
-                        <option value="completed">
-                            Completed
-                        </option>
-
-                        <option value="high">
-                            High Priority
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div
-                    id="taskList"
-                    class="full-task-list"
-                >
-
-                    <div class="empty-state">
-
-                        <div class="empty-icon">
-                            <i class="fa-solid fa-list-check"></i>
-                        </div>
-
-                        <h4>Your task list is empty</h4>
-
-                        <p>
-                            Create a task and start being productive.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-            <!-- ================= HABITS SECTION ================= -->
-
-            <section
-                class="page-section"
-                id="habitsSection"
-            >
-
-                <div class="section-header">
-
-                    <div>
-
-                        <span class="section-label">
-                            CONSISTENCY
-                        </span>
-
-                        <h2>Habit Tracker</h2>
-
-                        <p>
-                            Build positive habits and maintain your daily streak.
-                        </p>
-
-                    </div>
-
-                    <button
-                        class="primary-button"
-                        id="addHabitButton"
-                    >
-                        <i class="fa-solid fa-plus"></i>
-                        Add Habit
-                    </button>
-
-                </div>
-
-
-                <div
-                    id="habitList"
-                    class="habit-grid"
-                ></div>
-
-            </section>
-
-
-
-            <!-- ================= NOTES SECTION ================= -->
-
-            <section
-                class="page-section"
-                id="notesSection"
-            >
-
-                <div class="section-header">
-
-                    <div>
-
-                        <span class="section-label">
-                            IDEAS
-                        </span>
-
-                        <h2>My Notes</h2>
-
-                        <p>
-                            Save important thoughts, ideas and reminders.
-                        </p>
-
-                    </div>
-
-                    <button
-                        class="primary-button"
-                        id="addNoteButton"
-                    >
-                        <i class="fa-solid fa-plus"></i>
-                        New Note
-                    </button>
-
-                </div>
-
-
-                <div
-                    id="notesGrid"
-                    class="notes-grid"
-                ></div>
-
-            </section>
-
-
-
-            <!-- ================= ANALYTICS SECTION ================= -->
-
-            <section
-                class="page-section"
-                id="analyticsSection"
-            >
-
-                <div class="section-header">
-
-                    <div>
-
-                        <span class="section-label">
-                            INSIGHTS
-                        </span>
-
-                        <h2>Productivity Analytics</h2>
-
-                        <p>
-                            Understand your productivity and improve your workflow.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="analytics-grid">
-
-
-                    <div class="dashboard-card">
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <h3>Task Completion</h3>
-
-                                <p>
-                                    Overall completion rate
-                                </p>
+                                <strong id="analyticsPercentage">
+                                    0%
+                                </strong>
 
                             </div>
 
                         </div>
 
 
-                        <div class="large-progress">
+                        <!-- Summary -->
 
-                            <div class="large-progress-bar">
+                        <div class="dashboard-card">
 
-                                <div
-                                    class="large-progress-fill"
-                                    id="analyticsProgress"
-                                ></div>
+                            <div class="card-header">
 
-                            </div>
+                                <div>
 
-                            <strong id="analyticsPercentage">
-                                0%
-                            </strong>
+                                    <h3>
+                                        Productivity Summary
+                                    </h3>
 
-                        </div>
+                                    <p>
+                                        Your current performance
+                                    </p>
 
-                    </div>
-
-
-                    <div class="dashboard-card">
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <h3>Productivity Summary</h3>
-
-                                <p>
-                                    Your current performance
-                                </p>
+                                </div>
 
                             </div>
 
-                        </div>
 
+                            <div class="summary-list">
 
-                        <div class="summary-list">
+                                <div>
+                                    <span>Total Tasks</span>
+                                    <strong id="analyticsTotal">
+                                        0
+                                    </strong>
+                                </div>
 
-                            <div>
-                                <span>Total Tasks</span>
-                                <strong id="analyticsTotal">0</strong>
-                            </div>
+                                <div>
+                                    <span>Completed</span>
+                                    <strong id="analyticsCompleted">
+                                        0
+                                    </strong>
+                                </div>
 
-                            <div>
-                                <span>Completed</span>
-                                <strong id="analyticsCompleted">0</strong>
-                            </div>
+                                <div>
+                                    <span>Pending</span>
+                                    <strong id="analyticsPending">
+                                        0
+                                    </strong>
+                                </div>
 
-                            <div>
-                                <span>Pending</span>
-                                <strong id="analyticsPending">0</strong>
-                            </div>
+                                <div>
+                                    <span>Completion Rate</span>
+                                    <strong id="analyticsRate">
+                                        0%
+                                    </strong>
+                                </div>
 
-                            <div>
-                                <span>Completion Rate</span>
-                                <strong id="analyticsRate">0%</strong>
                             </div>
 
                         </div>
 
                     </div>
 
-                </div>
-
-            </section>
+                </section>
 
 
+                <!-- ================= SETTINGS ================= -->
 
-            <!-- ================= SETTINGS ================= -->
+                <section
+                    class="page-section"
+                    id="settingsSection">
 
-            <section
-                class="page-section"
-                id="settingsSection"
-            >
+                    <div class="section-header">
 
-                <div class="section-header">
+                        <div>
 
-                    <div>
+                            <span class="section-label">
+                                CUSTOMIZE
+                            </span>
 
-                        <span class="section-label">
-                            CUSTOMIZE
-                        </span>
+                            <h2>Settings</h2>
 
-                        <h2>Settings</h2>
-
-                        <p>
-                            Personalize your SmartLife experience.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="settings-card">
-
-
-                    <div class="setting-row">
-
-                        <div class="setting-info">
-
-                            <div class="setting-icon">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-
-                            <div>
-
-                                <strong>Display Name</strong>
-
-                                <p>
-                                    This name will appear on your dashboard.
-                                </p>
-
-                            </div>
+                            <p>
+                                Personalize your SmartLife experience.
+                            </p>
 
                         </div>
-
-
-                        <input
-                            type="text"
-                            id="nameInput"
-                            class="setting-input"
-                            placeholder="Enter your name"
-                        >
 
                     </div>
 
 
-                    <div class="setting-row">
+                    <div class="settings-card">
 
-                        <div class="setting-info">
 
-                            <div class="setting-icon">
-                                <i class="fa-solid fa-moon"></i>
+                        <!-- Name -->
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <div class="setting-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Display Name
+                                    </strong>
+
+                                    <p>
+                                        This name will appear
+                                        on your dashboard.
+                                    </p>
+
+                                </div>
+
                             </div>
 
-                            <div>
-
-                                <strong>Dark Mode</strong>
-
-                                <p>
-                                    Switch between light and dark themes.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <label class="switch">
 
                             <input
-                                type="checkbox"
-                                id="darkModeSwitch"
-                            >
-
-                            <span class="slider"></span>
-
-                        </label>
-
-                    </div>
-
-
-                    <div class="setting-row danger-setting">
-
-                        <div class="setting-info">
-
-                            <div class="setting-icon danger">
-                                <i class="fa-solid fa-trash"></i>
-                            </div>
-
-                            <div>
-
-                                <strong>Reset Application</strong>
-
-                                <p>
-                                    Delete all locally stored SmartLife data.
-                                </p>
-
-                            </div>
+                                type="text"
+                                id="nameInput"
+                                class="setting-input"
+                                placeholder="Enter your name"
+                                autocomplete="off">
 
                         </div>
 
 
-                        <button
-                            class="danger-button"
-                            id="resetButton"
-                        >
-                            Reset Data
-                        </button>
+                        <!-- Dark Mode -->
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <div class="setting-icon">
+                                    <i class="fa-solid fa-moon"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Dark Mode
+                                    </strong>
+
+                                    <p>
+                                        Switch between light
+                                        and dark themes.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="darkModeSwitch">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Reset -->
+
+                        <div class="setting-row danger-setting">
+
+                            <div class="setting-info">
+
+                                <div class="setting-icon danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Reset Application
+                                    </strong>
+
+                                    <p>
+                                        Delete all locally stored
+                                        SmartLife data.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="danger-button"
+                                id="resetButton"
+                                type="button">
+
+                                Reset Data
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         TASK MODAL
+         ===================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="taskModal">
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        NEW TASK
+                    </span>
+
+                    <h3>Create Task</h3>
+
+                </div>
+
+
+                <button
+                    class="close-modal"
+                    data-close="taskModal"
+                    type="button">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="taskForm">
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Task Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="e.g. Complete Web Technology assignment"
+                        required>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="taskCategory">
+                            Category
+                        </label>
+
+                        <select id="taskCategory">
+
+                            <option value="Study">
+                                Study
+                            </option>
+
+                            <option value="Work">
+                                Work
+                            </option>
+
+                            <option value="Personal">
+                                Personal
+                            </option>
+
+                            <option value="Project">
+                                Project
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskPriority">
+                            Priority
+                        </label>
+
+                        <select id="taskPriority">
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option
+                                value="Medium"
+                                selected>
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                        </select>
 
                     </div>
 
                 </div>
 
-            </section>
-
-
-        </div>
-
-    </main>
-
-</div>
-
-
-
-<!-- ================= TASK MODAL ================= -->
-
-<div
-    class="modal-overlay"
-    id="taskModal"
->
-
-    <div class="modal">
-
-        <div class="modal-header">
-
-            <div>
-
-                <span class="modal-label">
-                    NEW TASK
-                </span>
-
-                <h3>Create Task</h3>
-
-            </div>
-
-            <button
-                class="close-modal"
-                data-close="taskModal"
-            >
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-        </div>
-
-
-        <form id="taskForm">
-
-            <div class="form-group">
-
-                <label>
-                    Task Name
-                </label>
-
-                <input
-                    type="text"
-                    id="taskTitle"
-                    placeholder="e.g. Complete Web Technology assignment"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-row">
 
                 <div class="form-group">
 
-                    <label>
-                        Category
+                    <label for="taskDate">
+                        Due Date
                     </label>
 
-                    <select id="taskCategory">
-
-                        <option value="Study">
-                            Study
-                        </option>
-
-                        <option value="Work">
-                            Work
-                        </option>
-
-                        <option value="Personal">
-                            Personal
-                        </option>
-
-                        <option value="Project">
-                            Project
-                        </option>
-
-                    </select>
+                    <input
+                        type="date"
+                        id="taskDate">
 
                 </div>
 
 
-                <div class="form-group">
+                <div class="modal-actions">
 
-                    <label>
-                        Priority
-                    </label>
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close="taskModal">
 
-                    <select id="taskPriority">
+                        Cancel
 
-                        <option value="Low">
-                            Low
-                        </option>
+                    </button>
 
-                        <option value="Medium" selected>
-                            Medium
-                        </option>
 
-                        <option value="High">
-                            High
-                        </option>
+                    <button
+                        type="submit"
+                        class="primary-button">
 
-                    </select>
+                        <i class="fa-solid fa-plus"></i>
+                        Create Task
+
+                    </button>
 
                 </div>
 
-            </div>
+            </form>
 
-
-            <div class="form-group">
-
-                <label>
-                    Due Date
-                </label>
-
-                <input
-                    type="date"
-                    id="taskDate"
-                >
-
-            </div>
-
-
-            <div class="modal-actions">
-
-                <button
-                    type="button"
-                    class="secondary-button"
-                    data-close="taskModal"
-                >
-                    Cancel
-                </button>
-
-                <button
-                    type="submit"
-                    class="primary-button"
-                >
-                    <i class="fa-solid fa-plus"></i>
-                    Create Task
-                </button>
-
-            </div>
-
-        </form>
+        </div>
 
     </div>
 
-</div>
 
+    <!-- =====================================================
+         NOTE MODAL
+         ===================================================== -->
 
+    <div
+        class="modal-overlay"
+        id="noteModal">
 
-<!-- ================= NOTE MODAL ================= -->
+        <div class="modal">
 
-<div
-    class="modal-overlay"
-    id="noteModal"
->
+            <div class="modal-header">
 
-    <div class="modal">
+                <div>
 
-        <div class="modal-header">
+                    <span class="modal-label">
+                        QUICK NOTE
+                    </span>
 
-            <div>
+                    <h3>Create Note</h3>
 
-                <span class="modal-label">
-                    QUICK NOTE
-                </span>
+                </div>
 
-                <h3>Create Note</h3>
-
-            </div>
-
-            <button
-                class="close-modal"
-                data-close="noteModal"
-            >
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-        </div>
-
-
-        <form id="noteForm">
-
-            <div class="form-group">
-
-                <label>
-                    Note Title
-                </label>
-
-                <input
-                    type="text"
-                    id="noteTitle"
-                    placeholder="Note title..."
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    Content
-                </label>
-
-                <textarea
-                    id="noteContent"
-                    rows="6"
-                    placeholder="Write your thoughts..."
-                    required
-                ></textarea>
-
-            </div>
-
-
-            <div class="modal-actions">
 
                 <button
-                    type="button"
-                    class="secondary-button"
+                    class="close-modal"
                     data-close="noteModal"
-                >
-                    Cancel
-                </button>
+                    type="button">
 
-                <button
-                    type="submit"
-                    class="primary-button"
-                >
-                    <i class="fa-solid fa-floppy-disk"></i>
-                    Save Note
+                    <i class="fa-solid fa-xmark"></i>
+
                 </button>
 
             </div>
 
-        </form>
+
+            <form id="noteForm">
+
+                <div class="form-group">
+
+                    <label for="noteTitle">
+                        Note Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="noteTitle"
+                        placeholder="Note title..."
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="noteContent">
+                        Content
+                    </label>
+
+                    <textarea
+                        id="noteContent"
+                        rows="6"
+                        placeholder="Write your thoughts..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close="noteModal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Save Note
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
 
     </div>
 
-</div>
+
+    <!-- =====================================================
+         HABIT MODAL
+         ===================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="habitModal">
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        NEW HABIT
+                    </span>
+
+                    <h3>Create Habit</h3>
+
+                </div>
 
 
+                <button
+                    class="close-modal"
+                    data-close="habitModal"
+                    type="button">
 
-<!-- ================= HABIT MODAL ================= -->
+                    <i class="fa-solid fa-xmark"></i>
 
-<div
-    class="modal-overlay"
-    id="habitModal"
->
-
-    <div class="modal">
-
-        <div class="modal-header">
-
-            <div>
-
-                <span class="modal-label">
-                    NEW HABIT
-                </span>
-
-                <h3>Create Habit</h3>
+                </button>
 
             </div>
 
-            <button
-                class="close-modal"
-                data-close="habitModal"
-            >
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+
+            <form id="habitForm">
+
+                <div class="form-group">
+
+                    <label for="habitTitle">
+                        Habit Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="habitTitle"
+                        placeholder="e.g. Read for 20 minutes"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="habitIcon">
+                        Icon
+                    </label>
+
+                    <select id="habitIcon">
+
+                        <option value="fa-book">
+                            📚 Reading
+                        </option>
+
+                        <option value="fa-code">
+                            💻 Coding
+                        </option>
+
+                        <option value="fa-dumbbell">
+                            🏋️ Exercise
+                        </option>
+
+                        <option value="fa-droplet">
+                            💧 Water
+                        </option>
+
+                        <option value="fa-person-running">
+                            🏃 Running
+                        </option>
+
+                        <option value="fa-brain">
+                            🧠 Learning
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close="habitModal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+
+                        <i class="fa-solid fa-plus"></i>
+                        Add Habit
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST NOTIFICATION
+         ===================================================== -->
+
+    <div
+        class="toast"
+        id="toast">
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+
+        <div>
+
+            <strong id="toastTitle">
+                Success
+            </strong>
+
+            <p id="toastMessage">
+                Action completed successfully.
+            </p>
 
         </div>
 
 
-        <form id="habitForm">
+        <button
+            id="closeToast"
+            type="button"
+            aria-label="Close notification">
 
-            <div class="form-group">
+            <i class="fa-solid fa-xmark"></i>
 
-                <label>
-                    Habit Name
-                </label>
+        </button>
 
-                <input
-                    type="text"
-                    id="habitTitle"
-                    placeholder="e.g. Read for 20 minutes"
-                    required
-                >
-
-            </div>
+    </div>
 
 
-            <div class="form-group">
+    <!-- =====================================================
+         CONFIRMATION MODAL
+         ===================================================== -->
 
-                <label>
-                    Icon
-                </label>
+    <div
+        class="modal-overlay"
+        id="confirmModal">
 
-                <select id="habitIcon">
+        <div class="modal confirmation-modal">
 
-                    <option value="fa-book">
-                        📚 Reading
-                    </option>
+            <div class="confirmation-icon">
 
-                    <option value="fa-code">
-                        💻 Coding
-                    </option>
-
-                    <option value="fa-dumbbell">
-                        🏋️ Exercise
-                    </option>
-
-                    <option value="fa-droplet">
-                        💧 Water
-                    </option>
-
-                    <option value="fa-person-running">
-                        🏃 Running
-                    </option>
-
-                    <option value="fa-brain">
-                        🧠 Learning
-                    </option>
-
-                </select>
+                <i class="fa-solid fa-triangle-exclamation"></i>
 
             </div>
+
+
+            <h3 id="confirmTitle">
+                Are you sure?
+            </h3>
+
+
+            <p id="confirmMessage">
+                This action cannot be undone.
+            </p>
 
 
             <div class="modal-actions">
 
                 <button
-                    type="button"
                     class="secondary-button"
-                    data-close="habitModal"
-                >
+                    id="confirmCancel"
+                    type="button">
+
                     Cancel
+
                 </button>
 
+
                 <button
-                    type="submit"
-                    class="primary-button"
-                >
-                    <i class="fa-solid fa-plus"></i>
-                    Add Habit
+                    class="danger-button"
+                    id="confirmAction"
+                    type="button">
+
+                    Confirm
+
                 </button>
 
             </div>
 
-        </form>
-
-    </div>
-
-</div>
-
-
-
-<!-- ================= TOAST ================= -->
-
-<div
-    class="toast"
-    id="toast"
->
-
-    <div class="toast-icon">
-        <i class="fa-solid fa-check"></i>
-    </div>
-
-    <div>
-
-        <strong id="toastTitle">
-            Success
-        </strong>
-
-        <p id="toastMessage">
-            Action completed successfully.
-        </p>
-
-    </div>
-
-    <button id="closeToast">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
-
-</div>
-
-
-
-<!-- ================= CONFIRMATION ================= -->
-
-<div
-    class="modal-overlay"
-    id="confirmModal"
->
-
-    <div class="modal confirmation-modal">
-
-        <div class="confirmation-icon">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-        </div>
-
-        <h3 id="confirmTitle">
-            Are you sure?
-        </h3>
-
-        <p id="confirmMessage">
-            This action cannot be undone.
-        </p>
-
-        <div class="modal-actions">
-
-            <button
-                class="secondary-button"
-                id="confirmCancel"
-            >
-                Cancel
-            </button>
-
-            <button
-                class="danger-button"
-                id="confirmAction"
-            >
-                Confirm
-            </button>
-
         </div>
 
     </div>
 
-</div>
 
+    <!-- ================= JAVASCRIPT ================= -->
 
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
-```
